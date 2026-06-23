@@ -1,0 +1,21 @@
+# AI自动化智能体 配置文件
+
+agent:
+  name: "AutoAgent"
+  role: "assistant"
+  debug: false
+
+logging:
+  level: "INFO"
+  file: "agent.log"
+
+modules:
+  messenger:
+    enabled: false
+    channels:
+      default:
+        type: "feishu"
+        webhook: "https://open.feishu.cn/open-apis/bot/v2/hook/your-webhook"
+
+  scheduler:
+    enabled: false
